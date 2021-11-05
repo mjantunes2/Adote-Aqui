@@ -76,7 +76,6 @@ nav a:hover {
 .main-title {
   font-weight: bolder;
   font-size: large;
-  /*font-size: 45px;*/
   padding: 15px 0;
 }
 
@@ -159,9 +158,9 @@ nav a:hover {
     width: 100%;
   }
 
-  /*.main-title {
+  .main-title {
     font-size: large;
-  }*/
+  }
 
   .image-container {
     justify-content: initial;
