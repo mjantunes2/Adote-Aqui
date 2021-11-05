@@ -4,7 +4,7 @@ body {
 
 .header {
   display: flex;
-  height: 70px;
+  /*height: 70px;*/
   font-weight: bold;
   background-color: #007f7b;
 }
@@ -16,7 +16,7 @@ body {
 }
 
 .header-container {
-  width: 94%;
+  width: 100%;
   /*margin: 0 0 0 auto;*/
   margin-left: auto;
 }
@@ -68,14 +68,15 @@ nav a:hover {
 
 .main-title-container {
   display: flex;
-  height: 80px;
+  /*height: 80px;*/
   justify-content: center;
   align-items: center;
 }
 
 .main-title {
   font-weight: bolder;
-  font-size: 45px;
+  font-size: large;
+  /*font-size: 45px;*/
   padding: 15px 0;
 }
 
@@ -143,6 +144,9 @@ nav a:hover {
 
 /* parte mobile */
 @media (max-width: 768px) {
+  .main {
+    width:100%;
+  }
   .header-container {
     width: 100%;
     margin: 0;
@@ -154,6 +158,10 @@ nav a:hover {
   .header-nav {
     width: 100%;
   }
+
+  /*.main-title {
+    font-size: large;
+  }*/
 
   .image-container {
     justify-content: initial;
