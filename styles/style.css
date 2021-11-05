@@ -3,8 +3,10 @@ body {
 }
 
 .header {
-    font-weight: bold;
-    background-color: rgb(131, 131, 97);
+  display: flex;
+  height: 70px;
+  font-weight: bold;
+  background-color: #007f7b;
 }
 
 .header .header-container {
@@ -15,52 +17,150 @@ body {
 
 .header-container {
   width: 94%;
-  /*margin: 0 0 0 auto;*/  
+  /*margin: 0 0 0 auto;*/
   margin-left: auto;
 }
 
 .header-title {
-    color: yellow;
-    padding: 0 0 0 50px;
+  font-size: 150%;
+  color: yellow;
+  padding: 0 0 0 150px;
+}
+
+.header-title::before {
+  content: "🐾 ";
 }
 
 .header-title:hover {
-  background: red;
   font-weight: bold;
   color: black;
   font-size: 150%;
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 nav a:hover {
   font-size: 150%;
-  background: red;
-  color: white;
+  text-decoration: underline;
 }
 
 .header a {
+  font-size: 150%;
   text-decoration: none;
   color: inherit;
 }
 
 .header-nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 50%;
   padding: 10px;
-  background-color: yellow;
+  background-color: #697d7c;
+  height: 50px;
+  align-items: center;
+}
+
+.main {
+  width: 100%;
+  background: url("../images/logo.png") no-repeat center fixed;
+  background-size: contain;
+}
+
+.main-title-container {
+  display: flex;
+  height: 80px;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-title {
+  font-weight: bolder;
+  font-size: 45px;
+  padding: 15px 0;
+}
+
+.main-title::after {
+  content: " 🐾";
+}
+
+.main-title::before {
+  content: "🐾 ";
+}
+
+.image-container {
+  display: flex;
+  flex-direction: row;
+  /*width: 100%;*/
+  justify-content: space-between;
+  margin: 0 20px;
+}
+
+.image-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.image-column .pet-image {
+  /* tamanho minimo */
+  min-width: 200px;
+  min-height: 200px;
+
+  /* tamanho padrão */
+  width: 300px;
+  height: 300px;
+
+  /* tamanho máximo */
+  max-width: 400px;
+  max-height: 400px;
+
+  margin-bottom: 20px;
+  padding: 20px;
+  border: black 1px solid;
+  border-radius: 10px;
+}
+
+.image-column .pet-image:hover {
+  box-shadow: 0 0 10px #9ecaed;
+  border: 3px solid black;
+  border-left: 1px solid black;
+  border-top: 1px solid black;
+}
+
+.footer {
+  height: 50px;
+}
+
+.footer-container {
+  height: 100%;
+  background-color: #007f7b;
+  text-align: center;
+}
+
+.footer-text {
+  padding-top: 15px;
+  color: rgba(255, 255, 0, 0.384);
 }
 
 /* parte mobile */
-@media(max-width: 768px) {
-    .header-container {
-        width: 100%;
-        margin: 0;
-    }
-    .header-title {
-        display: none;
-    }
+@media (max-width: 768px) {
+  .header-container {
+    width: 100%;
+    margin: 0;
+  }
+  .header-title {
+    display: none;
+  }
 
-    .header-nav {
-        width: 100%;
-    }
+  .header-nav {
+    width: 100%;
+  }
+
+  .image-container {
+    justify-content: initial;
+    flex-direction: column;
+  }
+
+  .image-column {
+    margin: 0 auto;
+  }
 }
